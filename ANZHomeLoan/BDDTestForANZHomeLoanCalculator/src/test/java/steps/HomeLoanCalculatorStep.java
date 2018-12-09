@@ -12,6 +12,7 @@ import pages.HomeLoanCalculator;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class HomeLoanCalculatorStep extends BaseUtil{
 
@@ -28,15 +29,13 @@ public class HomeLoanCalculatorStep extends BaseUtil{
     }
 
     @And("^enters the following details in Your details section$")
-    public void enters_the_following_details_in_Your_details_section(DataTable arg1) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        // For automatic transformation, change DataTable to one of
-        // List<YourType>, List<List<E>>, List<Map<K,V>> or Map<K,V>.
-        // E,K,V must be a scalar (String, Integer, Date, enum etc)
+    public void enters_the_following_details_in_Your_details_section(DataTable sectionTableDetails) throws Throwable {
+    	Map <String,String> data =  (Map<String, String>) sectionTableDetails.asMaps(String.class,String.class);
+    	//Get the value from the cuumber table
+    	String dropdownSelection= data.get("Number of Dependents");
     	HomeLoanCalculator page = new HomeLoanCalculator(base.Driver);
-    	 page.SelectJointApplicationType();
-    
-    	 page.SelectFromDropDown("2");
+    	page.SelectSingleApplicationType();   
+    	page.SelectFromDropDown(dropdownSelection);
     
     }
  
