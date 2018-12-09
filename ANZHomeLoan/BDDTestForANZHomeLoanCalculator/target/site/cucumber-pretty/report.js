@@ -1,0 +1,144 @@
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("HomeLoanCalculator.feature");
+formatter.feature({
+  "line": 1,
+  "name": "HomeLoanCalculator",
+  "description": "",
+  "id": "homeloancalculator",
+  "keyword": "Feature"
+});
+formatter.before({
+  "duration": 2774354522,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 3,
+  "name": "Verify borrowing capacity",
+  "description": "",
+  "id": "homeloancalculator;verify-borrowing-capacity",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 4,
+  "name": "the customer in on the Borrowing Power Calcuator page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 5,
+  "name": "enters the following details in Your details section",
+  "rows": [
+    {
+      "cells": [
+        "Application Type",
+        "Number of Depends",
+        "Property you would like to buy"
+      ],
+      "line": 6
+    },
+    {
+      "cells": [
+        "Single",
+        "0",
+        "Home to live in"
+      ],
+      "line": 7
+    }
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 8,
+  "name": "enters the following details in Your earnings section",
+  "rows": [
+    {
+      "cells": [
+        "Your income (before tax)",
+        "Your other income"
+      ],
+      "line": 9
+    },
+    {
+      "cells": [
+        "80000",
+        "10000"
+      ],
+      "line": 10
+    }
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 11,
+  "name": "enters the following details in Your expenses section",
+  "rows": [
+    {
+      "cells": [
+        "Living expense",
+        "Current home loan repayments",
+        "Other loan repayments",
+        "Other loan repayment",
+        "Other commitments",
+        "Total credit card limits"
+      ],
+      "line": 12
+    },
+    {
+      "cells": [
+        "500",
+        "0",
+        "100",
+        "0",
+        "0",
+        "10000"
+      ],
+      "line": 13
+    }
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 14,
+  "name": "the customer submits the details to calculate the borrowing capacity",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 15,
+  "name": "the borrowing capacity of cusomter is calculated as \"$479,000\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "HomeLoanCalculatorStep.the_customer_in_on_the_Borrowing_Power_Calcuator_page()"
+});
+formatter.result({
+  "duration": 3815137276,
+  "status": "passed"
+});
+formatter.match({
+  "location": "HomeLoanCalculatorStep.enters_the_following_details_in_Your_details_section(DataTable)"
+});
+formatter.result({
+  "duration": 324760629,
+  "status": "passed"
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.after({
+  "duration": 1165590196,
+  "error_message": "org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?\nBuild info: version: \u00273.0.1\u0027, revision: \u00271969d75\u0027, time: \u00272016-10-18 09:49:13 -0700\u0027\nSystem info: host: \u0027user-PC\u0027, ip: \u0027192.168.1.6\u0027, os.name: \u0027Windows 7\u0027, os.arch: \u0027amd64\u0027, os.version: \u00276.1\u0027, java.version: \u00271.8.0_192\u0027\nDriver info: driver.version: RemoteWebDriver\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:130)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:658)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:487)\r\n\tat steps.Hook.TearDownTest(Hook.java:41)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat cucumber.runtime.Utils$1.call(Utils.java:40)\r\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\r\n\tat cucumber.runtime.Utils.invoke(Utils.java:34)\r\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)\r\n\tat cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)\r\n\tat cucumber.runtime.Runtime.runHooks(Runtime.java:212)\r\n\tat cucumber.runtime.Runtime.runAfterHooks(Runtime.java:206)\r\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)\r\n\tat cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)\r\n\tat cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)\r\n\tat cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)\r\n\tat org.testng.internal.Invoker.invokeMethod(Invoker.java:643)\r\n\tat org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)\r\n\tat org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)\r\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)\r\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)\r\n\tat org.testng.TestRunner.privateRun(TestRunner.java:782)\r\n\tat org.testng.TestRunner.run(TestRunner.java:632)\r\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:366)\r\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)\r\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)\r\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:268)\r\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\r\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)\r\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)\r\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1169)\r\n\tat org.testng.TestNG.run(TestNG.java:1064)\r\n\tat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:132)\r\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)\r\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)\r\n\tat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:147)\r\n\tat org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)\r\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)\r\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)\r\n",
+  "status": "failed"
+});
+});
