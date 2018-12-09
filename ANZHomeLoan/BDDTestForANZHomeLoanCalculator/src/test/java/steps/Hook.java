@@ -24,8 +24,11 @@ public class Hook extends BaseUtil{
         System.out.println("Opening the browser : Chrome");      
 
         //Chrome driver
-        System.setProperty("webdriver.chrome.driver", "D:\\JavaProjects\\libs\\Selenium\\BrowserDrivers\\chromedriver.exe");
+        //TODO: Set the path of the webdriver to be relative to the project by using user.property ?
+        System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\BrowserDrivers\\chromedriver.exe");
         base.Driver = new ChromeDriver();
+        // Few default timeouts to make sure we dont exception on load.
+        //TODO Move the 30 and 20 seconds to a separate class file
         base.Driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         base.Driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     }

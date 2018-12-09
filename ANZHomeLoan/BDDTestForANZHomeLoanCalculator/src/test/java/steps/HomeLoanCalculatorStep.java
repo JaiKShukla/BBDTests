@@ -36,17 +36,36 @@ public class HomeLoanCalculatorStep extends BaseUtil{
     	HomeLoanCalculator page = new HomeLoanCalculator(base.Driver);
     	page.SelectSingleApplicationType();   
     	page.SelectFromDropDown(dropdownSelection);
+    	page.SelectHomeTypeBorrower();
     
     }
  
-
-    @Then("^I should see the userform page wrongly$")
-    public void iShouldSeeTheUserformPageWrongly() throws Throwable {
-
-        Assert.assertEquals("Its not displayed", base.Driver.findElement(By.id("sdfgdsfsd")).isDisplayed(), true);
+    @And("^enters the following details in Your earnings section$")
+    public void enters_the_following_details_in_Your_earnings_section(DataTable sectionTableDetails) throws Throwable {
+    	Map <String,String> data =  (Map<String, String>) sectionTableDetails.asMaps(String.class,String.class);
+    	//Get the value from the cuumber table    	
+    	HomeLoanCalculator page = new HomeLoanCalculator(base.Driver);    	   
+    
+    
     }
-
-
-
+    
+    @And("^enters the following details in Your expenses section$")
+    public void enters_the_following_details_in_Your_expenses_section(DataTable sectionTableDetails) throws Throwable {
+    	Map <String,String> data =  (Map<String, String>) sectionTableDetails.asMaps(String.class,String.class);
+    	//Get the value from the cuumber table
+    	String dropdownSelection= data.get("Number of Dependents");
+    	HomeLoanCalculator page = new HomeLoanCalculator(base.Driver);
+    	page.SelectSingleApplicationType();   
+    	page.SelectFromDropDown(dropdownSelection);
+    
+    } 
+    
+    @Then("^the borrowing capacity of cusomter is calculated as \"([^\"]*)\"$")
+    public void the_borrowing_capacity_of_cusomter_is_calculated_as(String expectedBorrowingCapacity) throws Throwable {
+    	HomeLoanCalculator page = new HomeLoanCalculator(base.Driver);
+    	String actualBorrowingCapacity =page.GetBorrowingCapacity();
+    	Assert.assertEquals(actualBorrowingCapacity, expectedBorrowingCapacity);
+    	
+    }
 
 }
